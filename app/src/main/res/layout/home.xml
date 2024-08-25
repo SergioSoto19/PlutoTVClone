@@ -1,0 +1,117 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:id="@+id/main">
+
+    <LinearLayout
+        android:id="@+id/topBar"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:background="@color/black"
+        android:orientation="horizontal"
+        android:padding="10dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <ImageView
+            android:id="@+id/logoPluto"
+            android:layout_width="101dp"
+            android:layout_height="48dp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:srcCompat="@drawable/pluto" />
+
+        <Space
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1" />
+
+        <ImageView
+            android:layout_width="30dp"
+            android:layout_height="30dp"
+            android:layout_marginTop="10dp"
+            app:srcCompat="@drawable/transmitir" />
+
+        <Space
+            android:layout_width="16dp"
+            android:layout_height="wrap_content" />
+
+        <ImageView
+            android:layout_width="30dp"
+            android:layout_height="30dp"
+            android:layout_marginTop="8dp"
+            app:srcCompat="@drawable/usuario"/>
+    </LinearLayout>
+
+
+    <FrameLayout
+        android:id="@+id/videoContainer"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:background="@color/black"
+        app:layout_constraintTop_toBottomOf="@+id/topBar"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintHeight_percent="0.33"
+        app:layout_constraintEnd_toEndOf="parent"
+       >
+
+        <ImageView
+            android:id="@+id/videoImage"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            app:srcCompat="@drawable/south"/>
+    </FrameLayout>
+    
+    
+    <HorizontalScrollView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:layout_constraintTop_toBottomOf="@+id/videoContainer">
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:background="@color/black"
+            android:padding="10dp">
+
+            <Button
+                style="@style/MenuButtonStyle"
+                android:text="Pluto TV" />
+
+            <Button
+                style="@style/MenuButtonStyle"
+                android:text="Películas" />
+
+            <Button
+                style="@style/MenuButtonStyle"
+                android:text="Series" />
+
+            <Button
+                style="@style/MenuButtonStyle"
+                android:text="Retro" />
+            <Button
+                style="@style/MenuButtonStyle"
+                android:text="Novelas" />
+            <Button
+                style="@style/MenuButtonStyle"
+                android:text="Reality" />
+            <Button
+                style="@style/MenuButtonStyle"
+                android:text="Competencia" />
+        </LinearLayout>
+
+
+
+    </HorizontalScrollView>
+
+
+
+
+
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>
+
