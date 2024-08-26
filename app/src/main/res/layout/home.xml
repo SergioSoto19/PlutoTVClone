@@ -29,23 +29,26 @@
             android:layout_height="wrap_content"
             android:layout_weight="1" />
 
-        <ImageView
+        <ImageButton
             android:layout_width="30dp"
             android:layout_height="30dp"
+            android:background="@null"
+            android:scaleType="centerInside"
             android:layout_marginTop="10dp"
             app:srcCompat="@drawable/transmitir" />
 
         <Space
-            android:layout_width="16dp"
+            android:layout_width="18dp"
             android:layout_height="wrap_content" />
 
-        <ImageView
+        <ImageButton
             android:layout_width="30dp"
             android:layout_height="30dp"
             android:layout_marginTop="8dp"
+            android:scaleType="centerInside"
+            android:background="@null"
             app:srcCompat="@drawable/usuario"/>
     </LinearLayout>
-
 
     <FrameLayout
         android:id="@+id/videoContainer"
@@ -55,9 +58,7 @@
         app:layout_constraintTop_toBottomOf="@+id/topBar"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintHeight_percent="0.33"
-        app:layout_constraintEnd_toEndOf="parent"
-       >
-
+        app:layout_constraintEnd_toEndOf="parent">
         <ImageView
             android:id="@+id/videoImage"
             android:layout_width="match_parent"
@@ -73,35 +74,12 @@
         app:layout_constraintTop_toBottomOf="@+id/videoContainer">
 
         <LinearLayout
+            android:id="@+id/menuFil"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:background="@color/black"
+            android:orientation="horizontal"
             android:padding="10dp">
-
-            <Button
-                style="@style/MenuButtonStyle"
-                android:text="Pluto TV" />
-
-            <Button
-                style="@style/MenuButtonStyle"
-                android:text="Películas" />
-
-            <Button
-                style="@style/MenuButtonStyle"
-                android:text="Series" />
-
-            <Button
-                style="@style/MenuButtonStyle"
-                android:text="Retro" />
-            <Button
-                style="@style/MenuButtonStyle"
-                android:text="Novelas" />
-            <Button
-                style="@style/MenuButtonStyle"
-                android:text="Reality" />
-            <Button
-                style="@style/MenuButtonStyle"
-                android:text="Competencia" />
         </LinearLayout>
     </HorizontalScrollView>
 
@@ -145,17 +123,20 @@
             app:srcCompat="@drawable/lupa" />
     </LinearLayout>
 
+
+
     <ScrollView
         android:id="@+id/contentScrollView"
         android:layout_width="0dp"
         android:layout_height="0dp"
-        android:background="@color/purple"
+        android:background="@color/black"
         app:layout_constraintTop_toBottomOf="@+id/menuCate"
         app:layout_constraintBottom_toTopOf="@+id/bottomBar"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintEnd_toEndOf="parent">
 
         <LinearLayout
+            android:id="@+id/containerLinearLayout"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:orientation="vertical"
@@ -169,34 +150,10 @@
                 android:textColor="@android:color/white"/>
 
             <LinearLayout
+                android:id="@+id/highlightedSection"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:orientation="horizontal">
-
-                <ImageView
-                    android:layout_width="60dp"
-                    android:layout_height="60dp"
-                    android:src="@drawable/pluto"/>
-                <TextView
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:text="Canal 1"/>
-            </LinearLayout>
-
-            <LinearLayout
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:orientation="horizontal">
-
-                <ImageView
-                    android:layout_width="60dp"
-                    android:layout_height="60dp"
-                    android:src="@drawable/pluto"/>
-                <TextView
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:text="Canal 2"/>
-            </LinearLayout>
+                android:orientation="vertical"/>
 
             <TextView
                 android:layout_width="wrap_content"
@@ -206,26 +163,11 @@
                 android:textColor="@android:color/white"/>
 
             <LinearLayout
+                android:id="@+id/moviesSection"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:orientation="horizontal">
-
-                <ImageView
-                    android:layout_width="60dp"
-                    android:layout_height="60dp"
-                    android:src="@drawable/pluto"/>
-                <TextView
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:text="pelicula1"/>
-            </LinearLayout>
-
-
-
-
+                android:orientation="vertical"/>
         </LinearLayout>
-
-
     </ScrollView>
 
 </androidx.constraintlayout.widget.ConstraintLayout>

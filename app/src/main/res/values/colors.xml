@@ -3,5 +3,7 @@
     <color name="black">#FF000000</color>
     <color name="white">#FFFFFFFF</color>
     <color name="purple">#ac33ff</color>
+    <color name="greyO">#212020</color>
+
 
 </resources>
