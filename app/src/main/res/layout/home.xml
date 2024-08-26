@@ -67,6 +67,7 @@
     
     
     <HorizontalScrollView
+        android:id="@+id/menuCate"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         app:layout_constraintTop_toBottomOf="@+id/videoContainer">
@@ -102,16 +103,130 @@
                 style="@style/MenuButtonStyle"
                 android:text="Competencia" />
         </LinearLayout>
-
-
-
     </HorizontalScrollView>
 
 
+    <LinearLayout
+        android:id="@+id/bottomBar"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:background="@color/black"
+        android:padding="10dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+       >
+
+        <ImageButton
+            android:id="@+id/tv"
+            android:layout_width="0dp"
+            android:layout_height="31dp"
+            android:background="@null"
+            android:scaleType="centerInside"
+            android:layout_weight="1"
+            app:srcCompat="@drawable/tv" />
+
+        <ImageButton
+            android:id="@+id/play"
+            android:layout_width="0dp"
+            android:layout_height="31dp"
+            android:background="@null"
+            android:scaleType="centerInside"
+            android:layout_weight="1"
+            app:srcCompat="@drawable/play" />
+
+        <ImageButton
+            android:id="@+id/lupa"
+            android:layout_width="0dp"
+            android:layout_height="31dp"
+            android:background="@null"
+            android:scaleType="centerInside"
+            android:layout_weight="1"
+            app:srcCompat="@drawable/lupa" />
+    </LinearLayout>
+
+    <ScrollView
+        android:id="@+id/contentScrollView"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:background="@color/purple"
+        app:layout_constraintTop_toBottomOf="@+id/menuCate"
+        app:layout_constraintBottom_toTopOf="@+id/bottomBar"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:padding="8dp">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Sección Destacada"
+                android:textSize="18sp"
+                android:textColor="@android:color/white"/>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+
+                <ImageView
+                    android:layout_width="60dp"
+                    android:layout_height="60dp"
+                    android:src="@drawable/pluto"/>
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Canal 1"/>
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+
+                <ImageView
+                    android:layout_width="60dp"
+                    android:layout_height="60dp"
+                    android:src="@drawable/pluto"/>
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Canal 2"/>
+            </LinearLayout>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Peliculas"
+                android:textSize="18sp"
+                android:textColor="@android:color/white"/>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+
+                <ImageView
+                    android:layout_width="60dp"
+                    android:layout_height="60dp"
+                    android:src="@drawable/pluto"/>
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="pelicula1"/>
+            </LinearLayout>
 
 
 
 
+        </LinearLayout>
+
+
+    </ScrollView>
 
 </androidx.constraintlayout.widget.ConstraintLayout>
 
