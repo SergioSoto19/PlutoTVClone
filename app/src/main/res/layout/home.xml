@@ -169,6 +169,5 @@
                 android:orientation="vertical"/>
         </LinearLayout>
     </ScrollView>
-
 </androidx.constraintlayout.widget.ConstraintLayout>
 
