@@ -3,7 +3,7 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:id="@+id/main">
+    android:id="@+id/home">
 
     <LinearLayout
         android:id="@+id/topBar"
@@ -122,8 +122,6 @@
             android:layout_weight="1"
             app:srcCompat="@drawable/lupa" />
     </LinearLayout>
-
-
 
     <ScrollView
         android:id="@+id/contentScrollView"
