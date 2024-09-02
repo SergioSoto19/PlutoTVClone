@@ -1,3 +1,14 @@
 <resources>
     <string name="app_name">PlutoTvClone</string>
+    <string name="channel_name_ac">Accion</string>
+    <string name="channel_name_co">Comedia</string>
+    <string name="channel_name_Te">Terror</string>
+    <string name="channel_name_Sus">Suspenso</string>
+    <string name="channel_name_Dra">Drama</string>
+    <string name="channel_name_Com">Comedia</string>
+    <string name="channel_name_Rom">Romance</string>
+    <string name="channel_name_Nar">Naruto</string>
+    <string name="channel_name_So">South Park</string>
+    <string name="channel_name_Det">Death Note</string>
+
 </resources>

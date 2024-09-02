@@ -6,15 +6,16 @@
     android:padding="8dp">
 
 
-    <ImageView
-        android:id="@+id/itemImage"
+    <ImageButton
+        android:id="@+id/channelImageButton"
         android:layout_width="60dp"
         android:layout_height="60dp"
-        android:src="@drawable/ss"
-        android:background="@color/greyO"/>
+        android:layout_marginTop="8dp"
+        android:background="@color/greyO"
+        android:scaleType="centerInside" />
 
     <TextView
-        android:id="@+id/textView"
+        android:id="@+id/channelName"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:layout_marginStart="18dp"
@@ -23,5 +24,7 @@
         android:paddingLeft="15dp"
         android:gravity="center_vertical"
         android:background="@color/greyO"/>
+
+
 
 </LinearLayout>
